@@ -123,11 +123,11 @@ const Breed = ({ account, web3, rightChain, utilContract, setCrobyList, setAlert
         return await contract.methods.walletOfOwner(account).call()
     }
 
-    // useEffect(() => {
-    //     if (account !== undefined && rightChain === true) {
-    //         getCroNFTList()
-    //     }
-    // }, [account, rightChain])
+    useEffect(() => {
+        if (account !== undefined && rightChain === true) {
+            getCroNFTList()
+        }
+    }, [account, rightChain])
 
     return (
         <MBox>

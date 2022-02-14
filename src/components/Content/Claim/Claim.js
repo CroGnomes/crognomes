@@ -114,11 +114,11 @@ const Claim = ({ account, web3, rightChain, utilContract, setAlert, setNotice })
         }
     }
 
-    // useEffect(() => {
-    //     if (account !== undefined && rightChain === true) {
-    //         getTotalClaimable()
-    //     }
-    // }, [account, rightChain])
+    useEffect(() => {
+        if (account !== undefined && rightChain === true) {
+            getTotalClaimable()
+        }
+    }, [account, rightChain,])
 
     return (
         <Wrapper>

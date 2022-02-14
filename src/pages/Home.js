@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import Header from '../components/Header/Header'
-// import Content from '../components/Content/Content'
+import Content from '../components/Content/Content'
 import Footer from '../components/Footer/Footer'
 import CustomizedSnackbars from '../components/Alert/Alert'
 
@@ -27,8 +27,6 @@ const Home = () => {
     const [alert, setAlert] = useState(false)
     const [notice, setNotice] = useState(["", ""])
 
-    console.log(web3, rightChain)
-
     return (
         <div className='top' style={{ height: '100%' }}>
             <Wrapper>
@@ -47,13 +45,13 @@ const Home = () => {
                         setAlert={setAlert}
                         setNotice={setNotice}
                     />
-                    {/* <Content
+                    <Content
                         account={account}
                         web3={web3}
                         rightChain={rightChain}
                         setAlert={setAlert}
                         setNotice={setNotice}
-                    /> */}
+                    />
                 </Shadow>
             </Wrapper>
             <Footer />

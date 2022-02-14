@@ -25,11 +25,11 @@ const Content = ({ account, web3, rightChain, setAlert, setNotice }) => {
     const [utilContract, setUtilContract] = useState()
     const [crobyList, setCrobyList] = useState([])
 
-    // useEffect(() => {
-    //     if (account !== undefined) {
-    //         setUtilContract(new web3.eth.Contract(ABIs[0].abi, ABIs[0].address))
-    //     }
-    // }, [account, rightChain])
+    useEffect(() => {
+        if (account !== undefined) {
+            setUtilContract(new web3.eth.Contract(ABIs[0].abi, ABIs[0].address))
+        }
+    }, [account, rightChain])
 
     return (
         <>
